@@ -5,5 +5,9 @@ def print_last_digit(number):
     Input: number
     Output: prints the digit
     """
-    store_mod = number - (number // 10) * 10
-    print("{}".format(store_mod), end="")
+    if number <= 9 and number >= 0:
+        print("{}".format(number), end="")
+    else:
+        store_mod = abs(number) % 10
+        print("{}".format(store_mod), end="")
+    
