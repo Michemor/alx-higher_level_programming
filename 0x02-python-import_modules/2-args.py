@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import sys
 if __name__ = "__main__":
+    import sys
+
     ac = (len(sys.argv) - 1)
     argv = sys.argv
     if ac == 0:
@@ -12,4 +13,3 @@ if __name__ = "__main__":
         print("{} arguments:".format(ac), end="\n")
         for i in range(1, (ac + 1)):
             print("{}: {}".format(i, argv[i]), end="\n")
-
