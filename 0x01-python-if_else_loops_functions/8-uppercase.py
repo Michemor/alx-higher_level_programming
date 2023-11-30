@@ -11,4 +11,4 @@ def uppercase(str):
         else:
             temp = n
         print("{}".format(temp), end="")
-    print()
+    print("\n".format(), end="")
