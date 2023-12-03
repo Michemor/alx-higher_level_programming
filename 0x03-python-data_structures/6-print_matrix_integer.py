@@ -2,5 +2,8 @@
 def print_matrix_integer(matrix=[[]]):
     """prints integers contained in matrix"""
     for c in range(len(matrix)):
-        r = " ".join("{}".format(matrix[c][r]) for r in range(len(matrix[c])))
-        print("{}".format(r))
+        for r in range(len(matrix[c])):
+            print("{:d}".format(matrix[c][r]), end="")
+            if r != len(matrix[c]) - 1:
+                print(" ", end="")
+        print("")
