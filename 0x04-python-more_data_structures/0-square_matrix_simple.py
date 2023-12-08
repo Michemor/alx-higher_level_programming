@@ -1,4 +1,4 @@
-#!/usr/bin/pytho
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     """
     squares the elements of a matrix
