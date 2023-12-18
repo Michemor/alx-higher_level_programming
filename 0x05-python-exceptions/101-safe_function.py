@@ -17,8 +17,7 @@ def safe_function(fct, *args):
     on failure it returns None
     """
     try:
-        x, y = args
-        return (fct(x, y))
+        return (fct(*args))
     except TypeError as e:
         print("Exception: {}".format(e), file=sys.stderr, end="\n")
         return (None)
