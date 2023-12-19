@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 A simple square
 
 Attributes:
@@ -13,7 +13,7 @@ class Square:
 
     """
     def __init__(self, size):
-        """ 
+        """
         initializes the dimensions of a square
         as contained in size
 
