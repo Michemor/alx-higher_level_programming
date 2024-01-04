@@ -46,8 +46,9 @@ class Rectangle:
         pat = []
         for j in range(self.__height):
             [pat.append(str(self.print_symbol)) for j in range(self.__width)]
-        if j != self.__height - 1:
-            pat.append("\n")
+            if j != self.__height - 1:
+
+                pat.append("\n")
         return ("".join(pat))
 
     def __repr__(self):
