@@ -47,7 +47,7 @@ class Rectangle:
         Returns:
             pattern to be printed into the screen
         """
-        s = "Rectangle (" + str(self.__width) + ", " + str(self.__height) + ")"
+        s = "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
         return s
 
     @property
