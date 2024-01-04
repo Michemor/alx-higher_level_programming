@@ -35,8 +35,10 @@ class Rectangle:
         Returns:
             pattern to be printed into the screen
         """
-        pattern = "\n".join(["#"*self.__width]*self.__height)
-        return (pattern)
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+        else:
+            return ("\n".join(["#"*self.__width]*self.__height))
 
     @property
     def width(self):
