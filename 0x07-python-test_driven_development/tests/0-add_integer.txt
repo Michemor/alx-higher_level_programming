@@ -1,0 +1,38 @@
+# 0-add_integer.txt
+==================================
+How to use the 0-add_integer.py
+==================================
+
+Using ``add_integer``: a function that adds two integers
+Adds integers and checks for errors in addition
+
+Usage
+=====
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Can be used for integer and float values
+
+>>> add_integer(8.9, 5.6)
+13
+>>> add_integer(3, 2)
+5
+>>> add_integer(-3, -2)
+-5
+>>> add_integer(3, 2.3)
+5
+
+Non_numbers
+===========
+Generated an error when non-integer values are passed to it
+
+>>> add_integer("School", 5)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(2, "Hello")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
