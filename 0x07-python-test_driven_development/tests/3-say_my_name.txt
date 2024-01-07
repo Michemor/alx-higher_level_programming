@@ -1,0 +1,33 @@
+```say_my_name```
+
+================================
+How to use the module say my name
+=================================
+
+``` say_my_name : prints the string "My name is John Smith" where
+John and Smith are passed as first_name and last_name as arguments to the
+function```
+
+Usage
+=====
+In the case string arguments are passed
+	>>> first_name = "John"
+	>>> last_name = "Smith"
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name(first_name, last_name)
+	My name is John Smith
+
+In the case non-string arguments are passed
+	>>> say_my_name(2, last_name)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+In the case the second argument is passed as a non-string
+	>>> say_my_name(first_name, 3)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+Test case for more than two arguments passed
+	>>> say_my_name(first_name, last_name, "Esther")
+	Traceback (most recent call last):
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given

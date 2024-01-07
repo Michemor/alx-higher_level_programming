@@ -1,0 +1,45 @@
+``` Module: 2-matrix_divided ```
+=================================
+How to use the matrix_divided
+=================================
+
+The function takes in a matrix as input and divides it by a given
+integer passed to it. Both matrix and integer are passed to the function
+as arguments.
+
+Usage
+=======
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> matrix = [[1,2,3], [4,5,6]]
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+In the case a string is passed as the integer an error is raised
+
+	>>> matrix_divided(matrix, 'a')
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+In the case of a list of list containing strings
+	>>> names = [["james", "bossie"], ["Michael", "games"]]
+	>>> matrix_divided(names, 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> names = [[1, 2], ["Michael", "games"]]
+	>>> matrix_divided(names, 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+In the case div is equal to zero
+	>>> matrix = [[1,2,3], [4,5,6]]
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+In the case the matrixes are of different size
+	>>> matrix = [[1,2,3], [4,5,6,7]]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
