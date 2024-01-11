@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import json
 """ module: working with json (JavaScript Object Notation) """
+
+import json
 
 
 def to_json_string(my_obj):
@@ -8,4 +9,4 @@ def to_json_string(my_obj):
     converts an object to a json string. The object is passed
     as an argument to the string
     """
-    return (json.dumps(my_obj))
+    return json.dumps(my_obj)
