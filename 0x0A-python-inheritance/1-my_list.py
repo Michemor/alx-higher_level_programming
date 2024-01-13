@@ -3,6 +3,10 @@
 
 
 class MyList(list):
+    """
+    My List: inherits from list and sorts list
+    list - class containing methods that are operated on python lists
+    """
 
     def __init__(self):
         """
