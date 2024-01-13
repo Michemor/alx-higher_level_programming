@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 module: working with inheritance in python
 and other examples of concepts in python programming
 """
