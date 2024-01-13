@@ -1,0 +1,25 @@
+#Module: docstring for testing 	`1-my_list.py`
+=============================
+Usage of 1-my_list.py:
+Inherits from list class and sorts a list in ascending order
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	>>> my_list.print_sorted()
+	>>> print(my_list)
+	
+test case for list containing strings
+	>>> names_list = MyList()
+	>>> names_list.append("James")
+	>>> names_list.append("come")
+	>>> names_list.append("home")
+	>>> print(names_list)
+	['James', 'come', 'home']
+	>>> names_list.print_sorted()
+	['James', 'come', 'home']
