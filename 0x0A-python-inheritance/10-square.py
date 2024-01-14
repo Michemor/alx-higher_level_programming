@@ -24,7 +24,7 @@ class Square(Rectangle):
         defines calculation for area method
         """
         return (self.__size * self.__size)
-    
+
     def __str__(self):
         """
         prints info about square
