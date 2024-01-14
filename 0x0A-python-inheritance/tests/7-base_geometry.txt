@@ -1,0 +1,40 @@
+``module: 7-base_geometry.py ``
+
+=============================
+How to use 7-base_geometry.py
+=============================
+
+The module contains a class that defines a base for any geometry.
+The area method defines method to calculate the area
+The integer_validator checks whether the passed value is an integer and
+raises an error if not
+The following show expected results for some checks:
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+
+In the case no argument is passed 
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: BaseGeometry.integer_validator() missing
+	2 required positional arguments: 'name' and 'value'
+
+In case only one argument is passed
+	>>> bg.integer_validator("width")
+	Traceback (most recent call last):
+	TypeError: BaseGeometry.integer_validator() missing 
+	2 required positional arguments: 'name' and 'value'
+
+For correct output of values
+	>>> bg.integer_validator("width", 2)
+
+
+In case value passed is a non-integer an exception is raised
+	>>> bg.integer_validator("width", "two")
+	Traceback (most recent call last):
+	TypeError: width must be an integer
+
+In case a value passed is less than zero a value error is raised
+	>>> bg.integer_validator("width", -2)
+	Traceback (most recent call last):
+	ValueError: width must be greater than 0
