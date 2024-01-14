@@ -38,3 +38,19 @@ In case a value passed is less than zero a value error is raised
 	>>> bg.integer_validator("width", -2)
 	Traceback (most recent call last):
 	ValueError: width must be greater than 0
+
+Output case for non-int arguments i.e float
+	>>> bg.integer_validator("age". 13.7)
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+Test case for area method call
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+test case for integer validator without reference to object
+	>>> integer_validator()
+	Traceback (most recent call last):
+	NameError: name 'integer_validator' is not defined
+
