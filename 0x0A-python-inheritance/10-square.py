@@ -17,16 +17,5 @@ class Square(Rectangle):
             size(int) : defines dimensions of a square
         """
         self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
-
-    def area(self):
-        """
-        defines calculation for area method
-        """
-        return (self.__size * self.__size)
-
-    def __str__(self):
-        """
-        prints info about square
-        """
-        return ("[Recangle] {}/{}".format(self.__size, self.__size))
