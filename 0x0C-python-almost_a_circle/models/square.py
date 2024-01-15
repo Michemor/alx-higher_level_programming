@@ -44,3 +44,11 @@ class Square(Rectangle):
                     self.id, self.x, self.y, self.size
                     )
                 )
+
+        def update(self, *args, **kwargs):
+            """
+            updates dimensions of square based on args and kwargs
+            These are arbitrary arguments that allow us to pass
+            a random number of arguments to a function
+            """
+            self.update(*args, **kwargs)
