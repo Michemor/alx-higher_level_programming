@@ -145,13 +145,20 @@ class Rectangle(Base):
                 print("#", end="")
             print("")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         updates the value of rectangle attributes
         using arbitrary arguments
         """
-        self.id = args[0] if len(args) > 0 else self.id
-        self.width = args[1] if len(args) > 1 else self.width
-        self.height = args[2] if len(args) > 2 else self.height
-        self.x = args[3] if len(args) > 3 else self.x
-        self.y = args[4] if len(args) > 4 else self.y
+        if args:
+            self.id = args[0] if len(args) > 0 else self.id
+            self.width(args[1]) if len(args) > 1 else self.width
+            self.height(args[2]) if len(args) > 2 else self.height
+            self.x(args[3]) if len(args) > 3 else self.x
+            self.y(args[4]) if len(args) > 4 else self.y
+        if kwargs:
+            self.id = kwargs.get("id", self.id)
+            self.width = kwargs.get("width", self.width) 
+            self.height = kwargs.get("height", self.height) 
+            self.x = kwargs.get("x", self.x)
+            self.y = kwargs.get("y", self.y)
