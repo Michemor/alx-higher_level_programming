@@ -25,7 +25,6 @@ class Square(Rectangle):
         """
         return (self.width)
 
-
     def __str__(self):
         """
         prints info about square. Overrides the str() method
