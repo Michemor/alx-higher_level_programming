@@ -84,7 +84,7 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if height <= 0:
+        if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
@@ -144,3 +144,14 @@ class Rectangle(Base):
             for r in range(self.__width):
                 print("#", end="")
             print("")
+
+    def update(self, *args):
+        """
+        updates the value of rectangle attributes
+        using arbitrary arguments
+        """
+        self.id = args[0] if len(args) > 0 else self.id
+        self.width = args[1] if len(args) > 1 else self.width
+        self.height = args[2] if len(args) > 2 else self.height
+        self.x = args[3] if len(args) > 3 else self.x
+        self.y = args[4] if len(args) > 4 else self.y
