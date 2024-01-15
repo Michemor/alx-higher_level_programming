@@ -51,4 +51,13 @@ class Square(Rectangle):
             These are arbitrary arguments that allow us to pass
             a random number of arguments to a function
             """
-            self.update(*args, **kwargs)
+            if args:
+                self.id = args[0] if len(args) > 0 else self.id
+                self.size = args[1] if len(args) > 1 else self.size
+                self.x = args[2] if len(args) > 2 else self.x
+                self.y = args[3] if len(args) > 3 else self.y
+            if kwargs:
+                self.id = kwargs.get("id", self.id)
+                self.size = kwargs.get("size", self.size)
+                self.x = kwargs.get("x", self.x)
+                self.y = kwargs.get("y", self.y)
