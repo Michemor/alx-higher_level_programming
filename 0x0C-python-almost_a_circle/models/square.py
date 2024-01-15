@@ -25,6 +25,15 @@ class Square(Rectangle):
         """
         return (self.width)
 
+    @size.setter
+    def size(self, value):
+        """
+        sets the value of the width which equates
+        to the value of the square
+        """
+        self.width = value
+        self.height = value
+
     def __str__(self):
         """
         prints info about square. Overrides the str() method
