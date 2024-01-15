@@ -46,8 +46,12 @@ class Rectangle(Base):
         overrides the original str() method and prints
         dev defined string
         """
-        return ("""[Rectangle] ({}) {}/{} - {}/{}"""\
-                .format(self.id, self.__x, self.__y, self.__width, self.__height))
+        return (
+                "[Rectangle] ({}) {}/{} - {}/{}".format(
+                    self.id, self.__x, self.__y, self.__width, self.__height
+                )
+            )
+
     @property
     def width(self):
         """
