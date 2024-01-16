@@ -75,9 +75,9 @@ class Base:
         - **dictionary can be thought of as a double pointer to a dictionary
         - To use the update method to assign all attributes
         you must create a “dummy” instance before:
-        - Create a Rectangle or Square instance with “dummy” 
+        - Create a Rectangle or Square instance with “dummy”
         mandatory attributes (width, height, size, etc.)
-        - Call update instance method to this “dummy” 
+        - Call update instance method to this “dummy”
         instance to apply your real values
         - You must use the method def update(self, *args, **kwargs)
         **dictionary must be used as **kwargs of the method update
@@ -92,3 +92,34 @@ class Base:
             dummy.update(**dictionary)
 
         return (dummy)
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        returns a list of instances:
+        - The filename must be: <Class name>.json - example: Rectangle.json
+        - If the file doesn’t exist, return an empty list
+        - Otherwise, return a list of instances
+            - the type of these instances depends on
+                cls (current class using this method)
+        - You must use the from_json_string and create
+        methods (implemented previously)
+        """
+        # creates the filename by appending .json
+        # __name__ is a special attribute that holds the name of the class
+        filename = cls.__name__ + ".json"
+
+        # if the filename is none, it returns and empty list
+        if filename is None:
+            return []
+        else:
+            # opens the filename
+            with open(filename, 'r') as file:
+                # reads the contents of the file and passes it to fun
+                # from_json_string that converts the JSON string to
+                # a list of dictionaries
+                dicts = Base.from_json_string(file.read())
+
+        # uses list comprehension to create a new list of objects
+
+        return [cls.create(**d) for d in dicts]
