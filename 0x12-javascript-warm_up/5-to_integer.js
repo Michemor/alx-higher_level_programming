@@ -2,10 +2,10 @@
 
 const { argv } = require('process');
 
-const to_number = parseInt(argv[2]);
+const toNumber = parseInt(argv[2]);
 
-if (to_number) {
-  console.log('My Number: ' + to_number);
+if (toNumber) {
+  console.log('My Number: ' + toNumber);
 } else {
   console.log('Not a Number');
 }
