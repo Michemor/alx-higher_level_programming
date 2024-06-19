@@ -1,10 +1,11 @@
 #!/usr/bin/node
 
 const { argv } = require('process');
-const toNumber = parseInt(argv[2]);
 
-if (toNumber) {
-  console.log('My Number: ' + toNumber);
+const num = parseInt(argv[2]);
+
+if (num) {
+  console.log(`My number: ${num}`);
 } else {
-  console.log('Not a Number');
+  console.log('Not a number');
 }
