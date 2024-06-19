@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
 const { argv } = require('process');
-
 const num = parseInt(argv[2]);
 
 if (num) {
