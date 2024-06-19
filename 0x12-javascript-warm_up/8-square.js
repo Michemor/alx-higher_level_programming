@@ -1,9 +1,7 @@
 #!/usr/bin/node
 
 const { argv } = require('process');
-
 const size = parseInt(argv[2]);
-
 if (size) {
   for (let i = 0; i < size; i++) {
     let symbol = '';
