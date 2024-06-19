@@ -10,7 +10,6 @@ function fact (n) {
 
 const { argv } = require('process');
 const val = parseInt(argv[2]);
-
 if (val) {
   console.log(fact(val));
 } else {
