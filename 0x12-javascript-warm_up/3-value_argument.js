@@ -2,7 +2,7 @@
 
 const { argv } = require('process');
 
-if (argv[2] === undefined) {
+if (argv.length <= 2) {
   console.log('No argument');
 } else {
   console.log(argv[2]);
