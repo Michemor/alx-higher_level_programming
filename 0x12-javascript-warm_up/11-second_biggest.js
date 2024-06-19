@@ -2,6 +2,7 @@
 
 let largest = 0;
 let secondLargest = 0;
+
 if (process.argv.length > 3) {
   for (let i = 2; i < process.argv.length; i++) {
     const num = parseInt(process.argv[i], 10);
