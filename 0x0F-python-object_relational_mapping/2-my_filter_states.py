@@ -7,18 +7,18 @@ of hbtn_0e_0_usa where name matches the argument
 import MySQLdb
 from sys import argv
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     username = argv[1]
-    password = argv[2]
+    key = argv[2]
     db = argv[3]
     s_name = argv[4]
 
     db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=username,
-        password=password,
-        database=db
+            host="localhost",
+            port=3306,
+            user=username,
+            password=key,
+            database=db
     )
     c = db.cursor()
     c.execute("SELECT * FROM states WHERE name = '{}' ORDER BY \
