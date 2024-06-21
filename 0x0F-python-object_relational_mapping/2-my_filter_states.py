@@ -23,8 +23,4 @@ if __name__ == '__main__':
     c = db.cursor()
     c.execute("SELECT * FROM states WHERE name = '{}' ORDER BY \
                 states.id ASC".format(s_name))
-    rows = c.fetchall()
-    for row in rows:
-        print(row)
-    c.close()
-    db.close()
+    [print(row) for row in c.fetchall()]
