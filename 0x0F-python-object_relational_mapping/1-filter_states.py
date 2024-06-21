@@ -18,7 +18,9 @@ if __name__ == '__main__':
     )
     c = db.cursor()
     c.execute(
-        """SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"""
+        """
+        SELECT * FROM states WHERE UPPER(LEFT(name, 1)) = 'N'
+        ORDER BY states.id ASC"""
     )
     rows = c.fetchall()
     for row in rows:
