@@ -16,4 +16,4 @@ if __name__ == "__main__":
 
     stmt = session.query(State).order_by(State.id)
     for row in stmt:
-        print(f"{row.id} : {row.name}")
+        print(f"{row.id}: {row.name}")
