@@ -7,11 +7,13 @@ from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                            .format(argv[1], argv[2],argv[3]),
-                            pool_pre_ping=True)
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
+                                                                    argv[1],
+                                                                    argv[2],
+                                                                    argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    stmt = session.query(State)
+
+    stmt = session.query(State).order_by(State.id)
     for row in stmt:
-            print(f"{row.id} : {row.name}")
+        print(f"{row.id} : {row.name}")
