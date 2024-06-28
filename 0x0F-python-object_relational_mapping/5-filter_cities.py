@@ -12,7 +12,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    state_name = argv[4];
+    state_name = argv[4]
 
     db = MySQLdb.connect(user=argv[1], password=argv[2], database=argv[3])
     cur = db.cursor()
