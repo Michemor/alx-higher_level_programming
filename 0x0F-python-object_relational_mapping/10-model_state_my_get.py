@@ -17,9 +17,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     sess = Session()
 
-    try:
-        state_name = sys.argv[4]
-        row = sess.query(State).filter(State.name == state_name).one()
-        print(f"{row.id}")
-    except NoResultFound:
-        print("Not Found")
+    found = False
+    for state in sess.query(State):
+        if (state.name == sys.argv[4]):
+            print(f"{state.id}")
+        break
+        found = True
+    if found is False:
+        print("Not found")
