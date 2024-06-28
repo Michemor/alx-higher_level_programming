@@ -13,5 +13,5 @@ if __name__ == "__main__":
     database = argv[3]
     db = MySQLdb.connect(user=username, password=key, db=database)
     c = db.cursor()
-    c.execute("SELECT * FROM states WHERE name LIKE('{}')".format(argv[4]))
+    c.execute("SELECT * FROM states WHERE name = '{}'".format(argv[4]))
     [print(row) for row in c.fetchall()]
