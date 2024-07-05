@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" fetches a URL using urllib """
+"""
+fetches a URL using urllib
+"""
 
 from urllib.request import urlopen
 
