@@ -6,8 +6,10 @@ from sys import argv
 
 if __name__ == "__main__":
     url = argv[1]
-    email = urlencode({'email': argv[2]})
-    email = email.encode('ascii')
+    val = {"email": argv[2]}
+    email = urlencode(val).encode("ascii")
+
     req = Request(url, email)
     with urlopen(req) as response:
         body = response.read().decode('utf-8')
+    print(body)
