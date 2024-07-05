@@ -12,4 +12,4 @@ if __name__ == "__main__":
     req = Request(url, email)
     with urlopen(req) as response:
         body = response.read().decode('utf-8')
-    print(body)
+        print(body)
