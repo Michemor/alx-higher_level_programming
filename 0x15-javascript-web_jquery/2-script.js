@@ -1,5 +1,5 @@
-$( document ).ready(function() {
-    $('div#red_header').on('click', () => {
-        $('header').css('color', '#FF0000');
-    });
+$(document).ready(() => {
+  $('div#red_header').click(() => {
+    $('header').css('color', '#FF0000');
+  });
 });
